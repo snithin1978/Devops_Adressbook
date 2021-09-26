@@ -7,7 +7,7 @@ pipeline {
         jdk "myjava"
     }
     stages {
-        stage('Compile') {
+        stage('compile') {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/snithin1978/Devops_Adressbook.git'
@@ -19,7 +19,7 @@ pipeline {
                 sh "mvn pmd:pmd"
             }
         }
-        stage('unittest') {
+        stage('test') {
             steps {
                 sh "mvn test"
             }
